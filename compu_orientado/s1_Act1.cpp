@@ -55,7 +55,7 @@ int main() {
     cout << "Ciudad: " << Ciudad << endl;
     cout << "Fecha: " << Fecha << endl;
     cout << "Hora: " << Hora << endl;
-    cout << "Capacidad: " << Capacidad << endl;
+    cout << "Capacidad: " << Capacidad << " espectadores" << endl;
     cout << "Boleto económico: $" << precio_eco << endl;
     cout << "Boleto VIP: $" << precio_vip << endl;
     cout << "Grupo del Mundial: " << Grupo << endl;
