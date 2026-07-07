@@ -28,7 +28,8 @@ float Circulo::calculaArea()
 
 void Circulo::imprimeArea()
 {
- cout<<"El area es: "<<calculaArea();
+    cout << "Mis coordenadas son: " << "x: " << x << " y: " << y << endl;
+    cout<<"El area es: "<<calculaArea()<<endl;
 }
 
 

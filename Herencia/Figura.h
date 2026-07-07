@@ -1,14 +1,16 @@
 #ifndef FIGURA_H
 #define FIGURA_H
+
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 class Figura
 {
-      private:
-          int x;
-          int y;
+    protected:
+        int x;
+        int y;
     public:
         Figura();
         void setX(int x);
@@ -19,9 +21,6 @@ class Figura
         float calculaArea();
         void imprimeArea();
         virtual ~Figura();
-
-    protected:
-
 
 };
 

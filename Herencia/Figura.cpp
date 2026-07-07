@@ -38,7 +38,8 @@ float Figura::calculaArea()
 
 void Figura::imprimeArea()
 {
-
+    cout << "Mis coordenadas son: " << "x: " << x << " y: " << y << endl;
+    cout << "No conozco mi area" << endl;
 }
 
 Figura::~Figura()
