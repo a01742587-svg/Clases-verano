@@ -38,12 +38,12 @@ void Fraccion::setDenominador(int den)
     this->den = den;
 }
 
-int Fraccion::getNumerador()
+int Fraccion::getNumerador() const 
 {
     return num;
 }
 
-int Fraccion::getDenominado()
+int Fraccion::getDenominado() const
 {
     return den;
 }
@@ -53,7 +53,7 @@ void Fraccion::reduceFraccion()
 
 }
 
-Fraccion Fraccion::divideFraccion(Fraccion F2)
+Fraccion Fraccion::divideFraccion(const Fraccion &F2)
 {
     Fraccion R;
 

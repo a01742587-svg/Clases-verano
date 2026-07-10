@@ -20,13 +20,13 @@ public:
     void setDenominador(int den);
 
     // Métodos accesores
-    int getNumerador();
-    int getDenominado();
+    int getNumerador() const;
+    int getDenominado() const;
 
     // Métodos especializados
     void reduceFraccion();
 
-    Fraccion divideFraccion(Fraccion F2);
+    Fraccion divideFraccion(const Fraccion &F2);
 
     void imprimeResultado();
 
