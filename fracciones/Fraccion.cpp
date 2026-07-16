@@ -30,7 +30,7 @@ void Fraccion::setDenominador()
 
 void Fraccion::setNumerador(int num)
 {
-    this->num = num;
+    this->num = num; // sobrecarga de parámetros
 }
 
 void Fraccion::setDenominador(int den)
@@ -38,7 +38,7 @@ void Fraccion::setDenominador(int den)
     this->den = den;
 }
 
-int Fraccion::getNumerador() const 
+int Fraccion::getNumerador() const
 {
     return num;
 }

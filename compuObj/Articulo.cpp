@@ -1,7 +1,8 @@
-#include <iostream>
-#include <string>
+#include <iostream> // es una biblioteca de entrada y salida de info, premite usar cout,cin,endl
+#include <string> 
 
-using namespace std;
+using namespace std; // permite escribir cout en lugar de std::cout
+
 
 class Articulo {
     private:
@@ -40,7 +41,7 @@ class Articulo {
     }
 };
 
-int main(){
+int main(){ //Aqui comenza nuestro programa
     Articulo articulo_1;
     float costo_Base;
 

@@ -3,36 +3,34 @@
 
 class Fraccion
 {
-    // Atributos
-private:
-    int num;
-    int den;
+    // atributos
+    private:
+        int num;
+        int den;
 
-    // Métodos
-public:
-    Fraccion(); // Constructor, inicializa los valores de los atributos
-    Fraccion(int d, int n);
+    // métodos
+    public:
+        Fraccion(); // Constructor, inicializa los valores de los atributos
+        Fraccion(int d, int n);
 
-    // Métodos modificadores
-    void setNumerador();
-    void setDenominador();
-    void setNumerador(int num);
-    void setDenominador(int den);
+        // métodos modificadores
+        void setNumerador();
+        void setDenominador();
+        void setNumerador(int num);
+        void setDenominador(int den);
 
-    // Métodos accesores
-    int getNumerador() const;
-    int getDenominado() const;
+        // métodos accesores
+        int getNumerador() const;
+        int getDenominado() const;
 
-    // Métodos especializados
-    void reduceFraccion();
+        // métodos especializados
+        void reduceFraccion();
+        Fraccion divideFraccion(const Fraccion &F2);
 
-    Fraccion divideFraccion(const Fraccion &F2);
+        void imprimeResultado();
 
-    void imprimeResultado();
-
-    // Destructor
-    virtual ~Fraccion();
-
+        // Destructor
+        virtual ~Fraccion();
 };
 
-#endif // FRACCION_H
+#endif
