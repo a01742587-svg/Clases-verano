@@ -2,4 +2,4 @@
 
 ## Diagrama UML
 
-![Diagrama UML] (UML.herencia.png)
+![Diagrama UML](UML_herencia.png)
