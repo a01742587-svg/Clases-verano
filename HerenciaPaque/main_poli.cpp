@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 #include "Persona.h"
 #include "Envio.h"
 #include "Paquete.h"
@@ -18,9 +19,19 @@ int main(){
 
     Sobre sobre2(remitente, destinatario,30,22);
 
-    cout << "Costo del envio: " <<envio1.calculaCosto() <<endl;
-    cout << "Costo del paquete: " << paquete1.calculaCosto() <<endl;
-    cout << "Costo del sobre normal: " << sobre1.calculaCosto()  << endl;
-    cout << "Costo del sobre grande: " << sobre2.calculaCosto() <<endl;
+    list<Envio*> listaEnvios; //creamos una lista de apuntadores tipo envio
+
+    //direcciones de los objetos a la lista
+    listaEnvios.push_back(&envio1);
+    listaEnvios.push_back(&paquete1);
+    listaEnvios.push_back(&sobre1);
+    listaEnvios.push_back(&sobre2);
+
+    for (Envio*envio : listaEnvios){
+        cout << "Costo del envio: " << envio ->calculaCosto() << endl;
+    }
+
+
     return 0;
+
 }
