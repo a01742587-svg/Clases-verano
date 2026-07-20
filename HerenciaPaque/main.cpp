@@ -8,12 +8,15 @@ using namespace std;
 
 int main(){
     Persona remitente("Fernanda","Culiacan",77777);
-    Persona destinario("ADany", "Guadalajara", 78685768);
+    Persona destinatario("ADany", "Guadalajara", 78685);
     
-    Envio envio1(remitente, destinario, 20,14);
-    Paquete paquete1(remitente, destinario, 40,20,5,10);
-    Sobre sobre1(remitente,destinario,20,30);
-    Sobre sobre2(remitente, destinario,30,22);
+    Envio envio1(remitente, destinatario, 20,14);
+
+    Paquete paquete1(remitente, destinatario, 40,20,5,10);
+
+    Sobre sobre1(remitente,destinatario,20,30);
+
+    Sobre sobre2(remitente, destinatario,30,22);
 
     cout << "Costo del envio: " <<envio1.calculaCosto() <<endl;
     cout << "Costo del paquete: " << paquete1.calculaCosto() <<endl;

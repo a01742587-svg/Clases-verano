@@ -5,18 +5,34 @@
 #include <string>
 #include "Persona.h"
 
-class Envio{
+class Envio{ //creamos nuestra clase envio
     protected:
-        Persona remitente;
-        Persona destinario;
-        static const double costoEstandar;
+        Persona remitente; // es una persona que envia paquete o sobre
+        Persona destinatario; // persona recibe paquete/sobre
+
+        static const double costoEstandar; // costo de cualquier envio
+        
+        //medidad de nuestro envio
         double largo;
         double ancho;
 
     public:
-        Envio();
-        Envio( Persona r, Persona d, double l, double a);
+        Envio(); //constructor por default
+        Envio( Persona r, Persona d, double l, double a); //constructor con parametros,recibe datos de envio
 
+        //SETTERS, permite modificar atributos
+        void setRemitente(Persona r);
+        void setDestinatario(Persona d);
+        void setLargo(double l);
+        void setAncho(double a);
+
+        //GETTERS, nos permite recibir los atributos
+        Persona getRemitente();
+        Persona getDestinatario();
+        double getLargo();
+        double getAncho();
+
+        // Calcula el costo del envio
         virtual double calculaCosto();
 
     
