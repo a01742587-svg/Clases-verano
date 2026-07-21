@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -11,10 +12,16 @@ class Empleado{
 
     public:
         //Constructor
-        Empleado(string n, int ni, string d, string p){
+        Empleado(string n, int ni){
             nombre=n;
             num_ind=ni;
+    
+        }
+        //SETTERS
+        void setDepartamento(string d){
             departamento=d;
+        }
+        void setPuesto(string p){
             puesto=p;
         }
 
@@ -38,68 +45,45 @@ class Empleado{
 };
 
 int main(){
-    //como vamos a crear 2 objetos para empleado haremos ls variables para cada uno.
-    string nombre1;
-    int num_ind1;
-    string departamento1;
-    string puesto1;
+   
+    string nombre;
+    int num_ind;
+    string departamento;
+    string puesto;
+    string nuevoDep;
 
-    string nombre2;
-    int num_ind2;
-    string departamento2;
-    string puesto2;
     
     //Le epedimos los datos al empleado 1
 
-    cout << "Empleado 1" << endl;
+    cout << "Empleado" << endl;
 
     cout << "Nombre: ";
-    getline(cin,nombre1);
+    getline(cin,nombre);
 
     cout << "Numero de identificacion: ";
-    cin >> num_ind1;
+    cin >> num_ind;
     cin.ignore();
 
-    cout << "Departamento: ";
-    getline(cin,departamento1);
+    //Crear constructor
 
-    cout << "Puesto: ";
-    getline(cin,puesto1);
-
-    //Objeto 
-
-    Empleado empleado1(nombre1, num_ind1, departamento1, puesto1);
-    cout << endl;
-
-    //Le pedimos los datos al empleado 2
-
-
-    cout << "Empleado 2" << endl;
-
-    cout << "Nombre: ";
-    getline(cin,nombre2);
-
-    cout << "Numero de identificacion: ";
-    cin >> num_ind2;
-    cin.ignore();
+    Empleado empleado1(nombre, num_ind);
 
     cout << "Departamento: ";
-    getline(cin,departamento2);
+    getline(cin,departamento);
 
     cout << "Puesto: ";
-    getline(cin,puesto2);
+    getline(cin,puesto);
 
-    //Objeto 
-
-    Empleado empleado2(nombre2, num_ind2, departamento2, puesto2);
+    empleado1.setDepartamento(departamento);
+    empleado1.setPuesto(puesto);
     cout << endl;
-
-    //Info
+   
+    //info 
     
     cout << "INFORMACION DE LOS EMPLEADOS" << endl;
     cout << endl;
 
-    cout << "Empleado 1" << endl;
+    cout << "Empleado" << endl;
     cout << "Nombre: " << empleado1.getNombre() << endl;
     cout << "Numero de identificacion: " << empleado1.getNumero_ind() << endl;
     cout << "Departamento: " << empleado1.getDepartamento() << endl;
@@ -107,11 +91,21 @@ int main(){
 
     cout << endl;
 
-    cout << "Empleado 2" << endl;
-    cout << "Nombre: " << empleado2.getNombre() << endl;
-    cout << "Numero de identificacion: " << empleado2.getNumero_ind() << endl;
-    cout << "Departamento: " << empleado2.getDepartamento() << endl;
-    cout << "Puesto: " << empleado2.getPuesto() << endl;
+    cout << "Nuevo departamento: ";
+    getline(cin,nuevoDep);
+
+    empleado1.setDepartamento(nuevoDep);
+
+    cout << "INFORMACION DE LOS EMPLEADOS" << endl;
+    cout << endl;
+
+    cout << "Nombre: " << empleado1.getNombre() << endl;
+    cout << "Numero de identificacion: " << empleado1.getNumero_ind() << endl;
+    cout << "Departamento: " << empleado1.getDepartamento() << endl;
+    cout << "Puesto: " << empleado1.getPuesto() << endl;
+
+
+    
 
     return 0;
 }
