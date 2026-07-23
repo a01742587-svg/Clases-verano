@@ -10,23 +10,25 @@ class Rectangulo : public Figura
         float altura;
 
     public:
+        // Constructores
         Rectangulo();
         Rectangulo(float base, float altura, int x, int y);
 
-
+        // Setters
         void setBase(float b);
         void setAltura(float a);
 
-
+        // Getters
         float getBase() const;
         float getAltura() const;
 
-
+        // Métodos polimórficos
         void Dibuja() override;
         float calculaArea() override;
+        float calculaPerimetro() override;
         void imprime() override;
 
-
+        // Destructor
         ~Rectangulo() override;
 };
 

@@ -19,9 +19,10 @@ class Figura
         int getX() const;
         int getY() const;
 
-        virtual void Dibuja(); 
-        virtual float calculaArea();
-        virtual void imprime();
+        virtual void Dibuja()=0;  //metodo virtual puro
+        virtual float calculaArea()=0;
+        virtual float calculaPerimetro()=0;
+        virtual void imprime()=0;
 
         virtual ~Figura();
 

@@ -39,6 +39,12 @@ float Circulo::calculaArea()
     return 3.1416 * pow(r, 2);
 }
 
+// Calcular perímetro
+float Circulo::calculaPerimetro()
+{
+    return 2 * 3.1416 * r;
+}
+
 // Imprimir información
 void Circulo::imprime()
 {
@@ -47,9 +53,8 @@ void Circulo::imprime()
          << " y: " << y << endl;
 
     cout << "Mi radio es: " << r << endl;
-
-    cout << "El area es: "
-         << calculaArea() << endl;
+    cout << "El area es: " << calculaArea() << endl;
+    cout << "El perimetro es: " << calculaPerimetro() << endl;
 }
 
 // Destructor

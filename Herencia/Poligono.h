@@ -24,6 +24,7 @@ class Poligono : public Figura
 
         
         void Dibuja() override;
+        float calculaPerimetro() override;
         float calculaArea() override;
         void imprime() override;
 

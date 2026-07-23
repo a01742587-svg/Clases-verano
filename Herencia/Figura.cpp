@@ -38,30 +38,8 @@ int Figura::getY() const
     return y;
 }
 
-// Método para dibujar
-void Figura::Dibuja()
-{
-    cout << "No se que figura soy" << endl;
-}
-
-// Método para calcular el área
-float Figura::calculaArea()
-{
-    return 0;
-}
-
-// Método para imprimir
-void Figura::imprime()
-{
-    cout << "Mis coordenadas son: "
-         << "x: " << x
-         << " y: " << y << endl;
-
-    cout << "No conozco mi area" << endl;
-}
-
 // Destructor
 Figura::~Figura()
 {
-    
+    // Destructor
 }

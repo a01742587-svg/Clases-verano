@@ -39,7 +39,7 @@ float Rectangulo::getAltura() const
     return altura;
 }
 
-// Método polimórfico
+// Método polimórfico para dibujar
 void Rectangulo::Dibuja()
 {
     cout << "Soy un rectangulo" << endl;
@@ -49,6 +49,12 @@ void Rectangulo::Dibuja()
 float Rectangulo::calculaArea()
 {
     return base * altura;
+}
+
+// Calcular el perímetro
+float Rectangulo::calculaPerimetro()
+{
+    return 2 * (base + altura);
 }
 
 // Imprimir información
@@ -61,6 +67,7 @@ void Rectangulo::imprime()
     cout << "Mi base es: " << base << endl;
     cout << "Mi altura es: " << altura << endl;
     cout << "El area es: " << calculaArea() << endl;
+    cout << "El perimetro es: " << calculaPerimetro() << endl;
 }
 
 // Destructor

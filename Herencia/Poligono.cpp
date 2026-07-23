@@ -52,6 +52,11 @@ float Poligono::calculaArea()
     return (numLados * pow(lado, 2))
            / (4 * tan(3.1416 / numLados));
 }
+//calcula perimetro
+float Poligono::calculaPerimetro()
+{
+    return numLados * lado;
+}
 
 // Imprimir información del polígono
 void Poligono::imprime()
@@ -60,14 +65,13 @@ void Poligono::imprime()
          << "x: " << x
          << " y: " << y << endl;
 
-    cout << "Mi numero de lados es: "
-         << numLados << endl;
+    cout << "Mi numero de lados es: " << numLados << endl;
 
-    cout << "La medida de cada lado es: "
-         << lado << endl;
+    cout << "La medida de cada lado es: " << lado << endl;
 
-    cout << "El area es: "
-         << calculaArea() << endl;
+    cout << "El area es: " << calculaArea() << endl;
+
+    cout << "El perimetro es: " << calculaPerimetro() << endl;
 }
 
 // Destructor

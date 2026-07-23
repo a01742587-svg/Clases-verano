@@ -1,4 +1,5 @@
 #include "Triangulo.h"
+#include <cmath>
 
 // Constructor por defecto
 Triangulo::Triangulo() : Figura()
@@ -51,6 +52,16 @@ float Triangulo::calculaArea()
     return (base * altura) / 2;
 }
 
+// Calcular el perímetro
+float Triangulo::calculaPerimetro()
+{
+    float hipotenusa;
+
+    hipotenusa = sqrt((base * base) + (altura * altura));
+
+    return base + altura + hipotenusa;
+}
+
 // Imprimir información
 void Triangulo::imprime()
 {
@@ -61,6 +72,7 @@ void Triangulo::imprime()
     cout << "Mi base es: " << base << endl;
     cout << "Mi altura es: " << altura << endl;
     cout << "El area es: " << calculaArea() << endl;
+    cout << "El perimetro es: " << calculaPerimetro() << endl;
 }
 
 // Destructor

@@ -44,6 +44,8 @@ void recorreLista(list<Figura*> F)
 
 int main()
 {
+    
+
     cout << "Fernanda Espinoza Garcia" << endl;
 
     list<Figura*> F;

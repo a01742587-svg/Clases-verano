@@ -16,9 +16,11 @@ class Circulo:public Figura
         float getRadio() const;
 
         float calculaArea() override;
+        float calculaPerimetro()override;
         void imprime() override;
 
         void Dibuja() override;
+        
         virtual ~Circulo();
 };
 
