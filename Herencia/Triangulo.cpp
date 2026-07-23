@@ -1,41 +1,70 @@
 #include "Triangulo.h"
-#include <math.h>
 
-Triangulo::Triangulo():Figura()
+// Constructor por defecto
+Triangulo::Triangulo() : Figura()
 {
-    base=0;
-    altura=0;
+    base = 0;
+    altura = 0;
 }
+
+// Constructor con parámetros
+Triangulo::Triangulo(float base, float altura, int x, int y)
+    : Figura(x, y)
+{
+    this->base = base;
+    this->altura = altura;
+}
+
+// Setter de base
 void Triangulo::setBase(float b)
 {
-    base=b;
+    base = b;
 }
+
+// Setter de altura
 void Triangulo::setAltura(float a)
 {
-    altura=a;
+    altura = a;
 }
+
+// Getter de base
 float Triangulo::getBase() const
 {
     return base;
 }
+
+// Getter de altura
 float Triangulo::getAltura() const
 {
     return altura;
 }
-string Triangulo::Dibuja()
+
+// Método polimórfico
+void Triangulo::Dibuja()
 {
-    return "Soy un triangulo";
+    cout << "Soy un triangulo" << endl;
 }
+
+// Calcular el área
 float Triangulo::calculaArea()
 {
-    return (base*altura)/2;
+    return (base * altura) / 2;
 }
-void Triangulo::imprimeArea()
-{           
-    cout << "Mis coordenadas son: " << "x: " << x << " y: " << y << endl;
-    cout<<"El area es: "<<calculaArea()<<endl;
+
+// Imprimir información
+void Triangulo::imprime()
+{
+    cout << "Mis coordenadas son: "
+         << "x: " << x
+         << " y: " << y << endl;
+
+    cout << "Mi base es: " << base << endl;
+    cout << "Mi altura es: " << altura << endl;
+    cout << "El area es: " << calculaArea() << endl;
 }
+
+// Destructor
 Triangulo::~Triangulo()
 {
-    //dtor
-}  
+    // Destructor
+}

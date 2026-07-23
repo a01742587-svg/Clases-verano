@@ -10,14 +10,20 @@ class Triangulo: public Figura {
 
     public:
         Triangulo();
-        void setBase(float b);
-        void setAltura(float a);
+        Triangulo(float base, float altura, int x, int y);
+        void setBase(float base);
+        void setAltura(float altura);
         float getBase() const;
         float getAltura() const;
-        string Dibuja();
-        float calculaArea();
-        void imprimeArea();
-        virtual ~Triangulo();
+
+        float calculaArea()override;
+        float calculaPerimetro();
+
+        void imprime() override;
+        void Dibuja() override;
+
+        ~Triangulo() override;
+
 };
 
 #endif // TRIANGULO_H

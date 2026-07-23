@@ -1,41 +1,70 @@
 #include "Rectangulo.h"
-#include <math.h>
 
-Rectangulo::Rectangulo():Figura()
+// Constructor por defecto
+Rectangulo::Rectangulo() : Figura()
 {
-    base=0;
-    altura=0;
+    base = 0;
+    altura = 0;
 }
+
+// Constructor con parámetros
+Rectangulo::Rectangulo(float base, float altura, int x, int y)
+    : Figura(x, y)
+{
+    this->base = base;
+    this->altura = altura;
+}
+
+// Setter de base
 void Rectangulo::setBase(float b)
 {
-    base=b;
+    base = b;
 }
+
+// Setter de altura
 void Rectangulo::setAltura(float a)
 {
-    altura=a;
+    altura = a;
 }
+
+// Getter de base
 float Rectangulo::getBase() const
 {
     return base;
 }
+
+// Getter de altura
 float Rectangulo::getAltura() const
 {
     return altura;
 }
-string Rectangulo::Dibuja()
+
+// Método polimórfico
+void Rectangulo::Dibuja()
 {
-    return "Soy un rectangulo";
+    cout << "Soy un rectangulo" << endl;
 }
+
+// Calcular el área
 float Rectangulo::calculaArea()
 {
-    return base*altura;
+    return base * altura;
 }
-void Rectangulo::imprimeArea()
+
+// Imprimir información
+void Rectangulo::imprime()
 {
-    cout << "Mis coordenadas son: " << "x: " << x << " y: " << y << endl;
-    cout<<"El area es: "<<calculaArea()<<endl;
+    cout << "Mis coordenadas son: "
+         << "x: " << x
+         << " y: " << y << endl;
+
+    cout << "Mi base es: " << base << endl;
+    cout << "Mi altura es: " << altura << endl;
+    cout << "El area es: " << calculaArea() << endl;
 }
+
+// Destructor
 Rectangulo::~Rectangulo()
 {
-    //dtor
-}   
+    // Destructor
+}

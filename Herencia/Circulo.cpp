@@ -1,39 +1,59 @@
 #include "Circulo.h"
-#include <math.h>
+#include <cmath>
 
-Circulo::Circulo():Figura()
+// Constructor por defecto
+Circulo::Circulo() : Figura()
 {
-    radio=0;
+    r = 0;
 }
 
+// Constructor con parámetros
+Circulo::Circulo(float r, int x, int y) : Figura(x, y)
+{
+    this->r = r;
+}
+
+// Setters
 void Circulo::setRadio(float r)
 {
-    radio=r;
+    this->r = r;
 }
 
+// Getters
 float Circulo::getRadio() const
 {
-    return radio;
+    return r;
 }
 
-string Circulo::Dibuja()
+//Metodos
+
+// Dibujar
+void Circulo::Dibuja()
 {
-    return "Soy un circulo";
+    cout << "Soy un circulo" << endl;
 }
 
+// Calcular el área
 float Circulo::calculaArea()
 {
-    return M_PI*pow(radio,2);
+    return 3.1416 * pow(r, 2);
 }
 
-void Circulo::imprimeArea()
+// Imprimir información
+void Circulo::imprime()
 {
-    cout << "Mis coordenadas son: " << "x: " << x << " y: " << y << endl;
-    cout<<"El area es: "<<calculaArea()<<endl;
+    cout << "Mis coordenadas son: "
+         << "x: " << x
+         << " y: " << y << endl;
+
+    cout << "Mi radio es: " << r << endl;
+
+    cout << "El area es: "
+         << calculaArea() << endl;
 }
 
-
+// Destructor
 Circulo::~Circulo()
 {
-    //dtor
+    // Destructor
 }

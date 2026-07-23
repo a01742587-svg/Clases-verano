@@ -13,13 +13,16 @@ class Figura
         int y;
     public:
         Figura();
+        Figura(int x, int y);
         void setX(int x);
         void setY(int y);
         int getX() const;
         int getY() const;
-        string Dibuja();
-        float calculaArea();
-        void imprimeArea();
+
+        virtual void Dibuja(); 
+        virtual float calculaArea();
+        virtual void imprime();
+
         virtual ~Figura();
 
 };

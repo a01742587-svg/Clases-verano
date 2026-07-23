@@ -6,15 +6,19 @@
 class Circulo:public Figura
 {
     private:
-        float radio;
+        float r;
 
     public:
         Circulo();
+        Circulo(float r, int x, int y);
+
         void setRadio(float r);
         float getRadio() const;
-        string Dibuja();
-        float calculaArea();
-        void imprimeArea();
+
+        float calculaArea() override;
+        void imprime() override;
+
+        void Dibuja() override;
         virtual ~Circulo();
 };
 
