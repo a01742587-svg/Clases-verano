@@ -10,13 +10,21 @@ using namespace std;
 class ListaF
 {
     private:
-        list<Fraccion*> Fracciones; // lista de apuntadores a Fraccion
+        // Lista de apuntadores a objetos Fraccion
+        list<Fraccion*> Fracciones;
 
     public:
+        // Constructor
         ListaF();
+
+        // Crear la lista
         void creaListaF();
+
+        // Recorrer e imprimir la lista
         void recorreListaF();
+
+        // Destructor
         virtual ~ListaF();
 };
 
-#endif
+#endif // LISTAF_H
