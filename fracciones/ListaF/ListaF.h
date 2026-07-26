@@ -23,6 +23,9 @@ class ListaF
         // Recorrer e imprimir la lista
         void recorreListaF();
 
+        // Realizar las operaciones
+        void realizaOperaciones();
+
         // Destructor
         virtual ~ListaF();
 };

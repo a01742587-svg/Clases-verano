@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Fraccion.h"
-#include "ListaF.h"
+#include "ListaF/ListaF.h"
 
 using namespace std;
 
@@ -14,6 +14,7 @@ int main()
 
     F.creaListaF();
     F.recorreListaF();
+    F.realizaOperaciones();
 
     return 0;
 }
